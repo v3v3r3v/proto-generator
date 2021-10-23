@@ -6,7 +6,7 @@ Provide single instrument to describe contracts for microservices and affectivel
 
 ## What is included:
 * Implementation-independent message description in .proto files
-* Generation of docs for defined messages (WIP)
+* Generation of docs for defined messages
 * Сode generation of libraries for languages 
     - C#
     - PHP
