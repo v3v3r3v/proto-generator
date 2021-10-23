@@ -1,0 +1,21 @@
+/**
+* Example entity Protocol Buffers
+* Author: Zverev Valeriy <zverevvaleriy@gmail.com>
+*/
+
+syntax = "proto3";
+
+
+option go_package = "github.com/zverevvaleriy/proto-generator/libs/go/pb";
+option csharp_namespace = "Pb";
+
+
+import "google/protobuf/timestamp.proto";
+
+message Example {
+    string name = 1;
+    int32 id = 2;  // Unique ID number for this person.
+    string email = 3;
+  
+    google.protobuf.Timestamp last_updated = 5;
+  }

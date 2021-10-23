@@ -7,8 +7,8 @@ syntax = "proto3";
 
 package Contacts;
 
-option go_package = "github.com/zverevvaleriy/proto-generator/libs/go/proto";
-option csharp_namespace = "Proto.Contacts";
+option go_package = "github.com/zverevvaleriy/proto-generator/libs/go/pb/contacts";
+option csharp_namespace = "Pb.Contacts";
 
 
 import "protos/contacts/person.proto";

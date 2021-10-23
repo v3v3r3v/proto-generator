@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Proto.Contacts {
+namespace Pb.Contacts {
 
   /// <summary>Holder for reflection information generated from protos/contacts/person.proto</summary>
   public static partial class PersonReflection {
@@ -31,13 +31,13 @@ namespace Proto.Contacts {
             "dXBkYXRlZBgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAaRwoL",
             "UGhvbmVOdW1iZXISDgoGbnVtYmVyGAEgASgJEigKBHR5cGUYAiABKA4yGi5D",
             "b250YWN0cy5QZXJzb24uUGhvbmVUeXBlIisKCVBob25lVHlwZRIKCgZNT0JJ",
-            "TEUQABIICgRIT01FEAESCAoEV09SSxACQklaNmdpdGh1Yi5jb20venZlcmV2",
-            "dmFsZXJpeS9wcm90by1nZW5lcmF0b3IvbGlicy9nby9wcm90b6oCDlByb3Rv",
-            "LkNvbnRhY3RzYgZwcm90bzM="));
+            "TEUQABIICgRIT01FEAESCAoEV09SSxACQkxaPGdpdGh1Yi5jb20venZlcmV2",
+            "dmFsZXJpeS9wcm90by1nZW5lcmF0b3IvbGlicy9nby9wYi9jb250YWN0c6oC",
+            "C1BiLkNvbnRhY3RzYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Proto.Contacts.Person), global::Proto.Contacts.Person.Parser, new[]{ "Name", "Id", "Email", "Phones", "LastUpdated" }, null, new[]{ typeof(global::Proto.Contacts.Person.Types.PhoneType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Proto.Contacts.Person.Types.PhoneNumber), global::Proto.Contacts.Person.Types.PhoneNumber.Parser, new[]{ "Number", "Type" }, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Pb.Contacts.Person), global::Pb.Contacts.Person.Parser, new[]{ "Name", "Id", "Email", "Phones", "LastUpdated" }, null, new[]{ typeof(global::Pb.Contacts.Person.Types.PhoneType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Pb.Contacts.Person.Types.PhoneNumber), global::Pb.Contacts.Person.Types.PhoneNumber.Parser, new[]{ "Number", "Type" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -58,7 +58,7 @@ namespace Proto.Contacts {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Proto.Contacts.PersonReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Pb.Contacts.PersonReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -133,12 +133,12 @@ namespace Proto.Contacts {
 
     /// <summary>Field number for the "phones" field.</summary>
     public const int PhonesFieldNumber = 4;
-    private static readonly pb::FieldCodec<global::Proto.Contacts.Person.Types.PhoneNumber> _repeated_phones_codec
-        = pb::FieldCodec.ForMessage(34, global::Proto.Contacts.Person.Types.PhoneNumber.Parser);
-    private readonly pbc::RepeatedField<global::Proto.Contacts.Person.Types.PhoneNumber> phones_ = new pbc::RepeatedField<global::Proto.Contacts.Person.Types.PhoneNumber>();
+    private static readonly pb::FieldCodec<global::Pb.Contacts.Person.Types.PhoneNumber> _repeated_phones_codec
+        = pb::FieldCodec.ForMessage(34, global::Pb.Contacts.Person.Types.PhoneNumber.Parser);
+    private readonly pbc::RepeatedField<global::Pb.Contacts.Person.Types.PhoneNumber> phones_ = new pbc::RepeatedField<global::Pb.Contacts.Person.Types.PhoneNumber>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Proto.Contacts.Person.Types.PhoneNumber> Phones {
+    public pbc::RepeatedField<global::Pb.Contacts.Person.Types.PhoneNumber> Phones {
       get { return phones_; }
     }
 
@@ -405,7 +405,7 @@ namespace Proto.Contacts {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Proto.Contacts.Person.Descriptor.NestedTypes[0]; }
+          get { return global::Pb.Contacts.Person.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -450,10 +450,10 @@ namespace Proto.Contacts {
 
         /// <summary>Field number for the "type" field.</summary>
         public const int TypeFieldNumber = 2;
-        private global::Proto.Contacts.Person.Types.PhoneType type_ = global::Proto.Contacts.Person.Types.PhoneType.Mobile;
+        private global::Pb.Contacts.Person.Types.PhoneType type_ = global::Pb.Contacts.Person.Types.PhoneType.Mobile;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public global::Proto.Contacts.Person.Types.PhoneType Type {
+        public global::Pb.Contacts.Person.Types.PhoneType Type {
           get { return type_; }
           set {
             type_ = value;
@@ -485,7 +485,7 @@ namespace Proto.Contacts {
         public override int GetHashCode() {
           int hash = 1;
           if (Number.Length != 0) hash ^= Number.GetHashCode();
-          if (Type != global::Proto.Contacts.Person.Types.PhoneType.Mobile) hash ^= Type.GetHashCode();
+          if (Type != global::Pb.Contacts.Person.Types.PhoneType.Mobile) hash ^= Type.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -508,7 +508,7 @@ namespace Proto.Contacts {
             output.WriteRawTag(10);
             output.WriteString(Number);
           }
-          if (Type != global::Proto.Contacts.Person.Types.PhoneType.Mobile) {
+          if (Type != global::Pb.Contacts.Person.Types.PhoneType.Mobile) {
             output.WriteRawTag(16);
             output.WriteEnum((int) Type);
           }
@@ -526,7 +526,7 @@ namespace Proto.Contacts {
             output.WriteRawTag(10);
             output.WriteString(Number);
           }
-          if (Type != global::Proto.Contacts.Person.Types.PhoneType.Mobile) {
+          if (Type != global::Pb.Contacts.Person.Types.PhoneType.Mobile) {
             output.WriteRawTag(16);
             output.WriteEnum((int) Type);
           }
@@ -543,7 +543,7 @@ namespace Proto.Contacts {
           if (Number.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Number);
           }
-          if (Type != global::Proto.Contacts.Person.Types.PhoneType.Mobile) {
+          if (Type != global::Pb.Contacts.Person.Types.PhoneType.Mobile) {
             size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
           }
           if (_unknownFields != null) {
@@ -561,7 +561,7 @@ namespace Proto.Contacts {
           if (other.Number.Length != 0) {
             Number = other.Number;
           }
-          if (other.Type != global::Proto.Contacts.Person.Types.PhoneType.Mobile) {
+          if (other.Type != global::Pb.Contacts.Person.Types.PhoneType.Mobile) {
             Type = other.Type;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -584,7 +584,7 @@ namespace Proto.Contacts {
                 break;
               }
               case 16: {
-                Type = (global::Proto.Contacts.Person.Types.PhoneType) input.ReadEnum();
+                Type = (global::Pb.Contacts.Person.Types.PhoneType) input.ReadEnum();
                 break;
               }
             }
@@ -607,7 +607,7 @@ namespace Proto.Contacts {
                 break;
               }
               case 16: {
-                Type = (global::Proto.Contacts.Person.Types.PhoneType) input.ReadEnum();
+                Type = (global::Pb.Contacts.Person.Types.PhoneType) input.ReadEnum();
                 break;
               }
             }
