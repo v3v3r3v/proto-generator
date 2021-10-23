@@ -65,7 +65,14 @@ Protocol buffers for Rust is not officially supported by Google, but a community
 cargo install protobuf-codegen
 ```
 
+### Setup doc generation
 
+[protoc-gen-doc](https://github.com/pseudomuto/protoc-gen-doc) plugin could be used for generate docs
+
+For download and build tool (go required):
+```
+make protoc-gen-doc-install
+```
 
 ## Usage
 
