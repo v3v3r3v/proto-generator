@@ -26,9 +26,9 @@ namespace Proto.Contacts {
           string.Concat(
             "CiJwcm90b3MvY29udGFjdHMvYWRkcmVzc19ib29rLnByb3RvEghDb250YWN0",
             "cxoccHJvdG9zL2NvbnRhY3RzL3BlcnNvbi5wcm90byIvCgtBZGRyZXNzQm9v",
-            "axIgCgZwZW9wbGUYASADKAsyEC5Db250YWN0cy5QZXJzb25CUlo/Z2l0aHVi",
+            "axIgCgZwZW9wbGUYASADKAsyEC5Db250YWN0cy5QZXJzb25CSVo2Z2l0aHVi",
             "LmNvbS96dmVyZXZ2YWxlcml5L3Byb3RvLWdlbmVyYXRvci9saWJzL2dvL3By",
-            "b3RvL2NvbnRhY3RzqgIOUHJvdG8uQ29udGFjdHNiBnByb3RvMw=="));
+            "b3RvqgIOUHJvdG8uQ29udGFjdHNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Proto.Contacts.PersonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

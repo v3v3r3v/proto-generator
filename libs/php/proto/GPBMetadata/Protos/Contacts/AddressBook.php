@@ -17,10 +17,10 @@ class AddressBook
         \GPBMetadata\Protos\Contacts\Person::initOnce();
         $pool->internalAddGeneratedFile(
             '
-»
+²
 "protos/contacts/address_book.protoContacts"/
 AddressBook 
-people (2.Contacts.PersonBRZ?github.com/zverevvaleriy/proto-generator/libs/go/proto/contactsªProto.Contactsbproto3'
+people (2.Contacts.PersonBIZ6github.com/zverevvaleriy/proto-generator/libs/go/protoªProto.Contactsbproto3'
         , true);
 
         static::$is_initialized = true;
