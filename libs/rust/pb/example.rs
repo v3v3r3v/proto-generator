@@ -30,6 +30,7 @@ pub struct ExampleMessage {
     pub id: i32,
     pub email: ::std::string::String,
     pub last_updated: ::protobuf::SingularPtrField<::protobuf::well_known_types::Timestamp>,
+    pub gender: ExampleMessage_Gender,
     // special fields
     pub unknown_fields: ::protobuf::UnknownFields,
     pub cached_size: ::protobuf::CachedSize,
@@ -145,6 +146,21 @@ impl ExampleMessage {
     pub fn take_last_updated(&mut self) -> ::protobuf::well_known_types::Timestamp {
         self.last_updated.take().unwrap_or_else(|| ::protobuf::well_known_types::Timestamp::new())
     }
+
+    // .Example.ExampleMessage.Gender gender = 5;
+
+
+    pub fn get_gender(&self) -> ExampleMessage_Gender {
+        self.gender
+    }
+    pub fn clear_gender(&mut self) {
+        self.gender = ExampleMessage_Gender::NONE;
+    }
+
+    // Param is passed by value, moved
+    pub fn set_gender(&mut self, v: ExampleMessage_Gender) {
+        self.gender = v;
+    }
 }
 
 impl ::protobuf::Message for ExampleMessage {
@@ -177,6 +193,9 @@ impl ::protobuf::Message for ExampleMessage {
                 4 => {
                     ::protobuf::rt::read_singular_message_into(wire_type, is, &mut self.last_updated)?;
                 },
+                5 => {
+                    ::protobuf::rt::read_proto3_enum_with_unknown_fields_into(wire_type, is, &mut self.gender, 5, &mut self.unknown_fields)?
+                },
                 _ => {
                     ::protobuf::rt::read_unknown_or_skip_group(field_number, wire_type, is, self.mut_unknown_fields())?;
                 },
@@ -202,6 +221,9 @@ impl ::protobuf::Message for ExampleMessage {
             let len = v.compute_size();
             my_size += 1 + ::protobuf::rt::compute_raw_varint32_size(len) + len;
         }
+        if self.gender != ExampleMessage_Gender::NONE {
+            my_size += ::protobuf::rt::enum_size(5, self.gender);
+        }
         my_size += ::protobuf::rt::unknown_fields_size(self.get_unknown_fields());
         self.cached_size.set(my_size);
         my_size
@@ -221,6 +243,9 @@ impl ::protobuf::Message for ExampleMessage {
             os.write_tag(4, ::protobuf::wire_format::WireTypeLengthDelimited)?;
             os.write_raw_varint32(v.get_cached_size())?;
             v.write_to_with_cached_sizes(os)?;
+        }
+        if self.gender != ExampleMessage_Gender::NONE {
+            os.write_enum(5, ::protobuf::ProtobufEnum::value(&self.gender))?;
         }
         os.write_unknown_fields(self.get_unknown_fields())?;
         ::std::result::Result::Ok(())
@@ -280,6 +305,11 @@ impl ::protobuf::Message for ExampleMessage {
                 |m: &ExampleMessage| { &m.last_updated },
                 |m: &mut ExampleMessage| { &mut m.last_updated },
             ));
+            fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeEnum<ExampleMessage_Gender>>(
+                "gender",
+                |m: &ExampleMessage| { &m.gender },
+                |m: &mut ExampleMessage| { &mut m.gender },
+            ));
             ::protobuf::reflect::MessageDescriptor::new_pb_name::<ExampleMessage>(
                 "ExampleMessage",
                 fields,
@@ -300,6 +330,7 @@ impl ::protobuf::Clear for ExampleMessage {
         self.id = 0;
         self.email.clear();
         self.last_updated.clear();
+        self.gender = ExampleMessage_Gender::NONE;
         self.unknown_fields.clear();
     }
 }
@@ -316,31 +347,97 @@ impl ::protobuf::reflect::ProtobufValue for ExampleMessage {
     }
 }
 
+#[derive(Clone,PartialEq,Eq,Debug,Hash)]
+pub enum ExampleMessage_Gender {
+    NONE = 0,
+    MALE = 1,
+    FEMALE = 2,
+}
+
+impl ::protobuf::ProtobufEnum for ExampleMessage_Gender {
+    fn value(&self) -> i32 {
+        *self as i32
+    }
+
+    fn from_i32(value: i32) -> ::std::option::Option<ExampleMessage_Gender> {
+        match value {
+            0 => ::std::option::Option::Some(ExampleMessage_Gender::NONE),
+            1 => ::std::option::Option::Some(ExampleMessage_Gender::MALE),
+            2 => ::std::option::Option::Some(ExampleMessage_Gender::FEMALE),
+            _ => ::std::option::Option::None
+        }
+    }
+
+    fn values() -> &'static [Self] {
+        static values: &'static [ExampleMessage_Gender] = &[
+            ExampleMessage_Gender::NONE,
+            ExampleMessage_Gender::MALE,
+            ExampleMessage_Gender::FEMALE,
+        ];
+        values
+    }
+
+    fn enum_descriptor_static() -> &'static ::protobuf::reflect::EnumDescriptor {
+        static descriptor: ::protobuf::rt::LazyV2<::protobuf::reflect::EnumDescriptor> = ::protobuf::rt::LazyV2::INIT;
+        descriptor.get(|| {
+            ::protobuf::reflect::EnumDescriptor::new_pb_name::<ExampleMessage_Gender>("ExampleMessage.Gender", file_descriptor_proto())
+        })
+    }
+}
+
+impl ::std::marker::Copy for ExampleMessage_Gender {
+}
+
+impl ::std::default::Default for ExampleMessage_Gender {
+    fn default() -> Self {
+        ExampleMessage_Gender::NONE
+    }
+}
+
+impl ::protobuf::reflect::ProtobufValue for ExampleMessage_Gender {
+    fn as_ref(&self) -> ::protobuf::reflect::ReflectValueRef {
+        ::protobuf::reflect::ReflectValueRef::Enum(::protobuf::ProtobufEnum::descriptor(self))
+    }
+}
+
 static file_descriptor_proto_data: &'static [u8] = b"\
     \n\x1cprotos/example/example.proto\x12\x07Example\x1a\x1fgoogle/protobuf\
-    /timestamp.proto\"\x89\x01\n\x0eExampleMessage\x12\x12\n\x04name\x18\x01\
+    /timestamp.proto\"\xeb\x01\n\x0eExampleMessage\x12\x12\n\x04name\x18\x01\
     \x20\x01(\tR\x04name\x12\x0e\n\x02id\x18\x02\x20\x01(\x05R\x02id\x12\x14\
     \n\x05email\x18\x03\x20\x01(\tR\x05email\x12=\n\x0clast_updated\x18\x04\
-    \x20\x01(\x0b2\x1a.google.protobuf.TimestampR\x0blastUpdatedB'Z\x0b/pb/e\
-    xample\xaa\x02\nPb.Example\xca\x02\nPb\\ExampleJ\xb1\x03\n\x06\x12\x04\
-    \x05\0\x14\x01\n_\n\x01\x0c\x12\x03\x05\0\x122U*\n\x20Example\x20entity\
-    \x20Protocol\x20Buffers\n\x20Author:\x20Zverev\x20Valeriy\x20<zverevvale\
-    riy@gmail.com>\n\n\x08\n\x01\x02\x12\x03\x07\0\x10\n\x08\n\x01\x08\x12\
-    \x03\t\0\"\n\t\n\x02\x08\x0b\x12\x03\t\0\"\n\x08\n\x01\x08\x12\x03\n\0'\
-    \n\t\n\x02\x08%\x12\x03\n\0'\n\x08\n\x01\x08\x12\x03\x0b\0%\n\t\n\x02\
-    \x08)\x12\x03\x0b\0%\n\t\n\x02\x03\0\x12\x03\r\0)\n\n\n\x02\x04\0\x12\
-    \x04\x0f\0\x14\x01\n\n\n\x03\x04\0\x01\x12\x03\x0f\x08\x16\n\x0b\n\x04\
-    \x04\0\x02\0\x12\x03\x10\x04\x14\n\x0c\n\x05\x04\0\x02\0\x05\x12\x03\x10\
-    \x04\n\n\x0c\n\x05\x04\0\x02\0\x01\x12\x03\x10\x0b\x0f\n\x0c\n\x05\x04\0\
-    \x02\0\x03\x12\x03\x10\x12\x13\n\x0b\n\x04\x04\0\x02\x01\x12\x03\x11\x04\
-    \x11\n\x0c\n\x05\x04\0\x02\x01\x05\x12\x03\x11\x04\t\n\x0c\n\x05\x04\0\
-    \x02\x01\x01\x12\x03\x11\n\x0c\n\x0c\n\x05\x04\0\x02\x01\x03\x12\x03\x11\
-    \x0f\x10\n\x0b\n\x04\x04\0\x02\x02\x12\x03\x12\x04\x15\n\x0c\n\x05\x04\0\
-    \x02\x02\x05\x12\x03\x12\x04\n\n\x0c\n\x05\x04\0\x02\x02\x01\x12\x03\x12\
-    \x0b\x10\n\x0c\n\x05\x04\0\x02\x02\x03\x12\x03\x12\x13\x14\n\x0b\n\x04\
-    \x04\0\x02\x03\x12\x03\x13\x04/\n\x0c\n\x05\x04\0\x02\x03\x06\x12\x03\
-    \x13\x04\x1d\n\x0c\n\x05\x04\0\x02\x03\x01\x12\x03\x13\x1e*\n\x0c\n\x05\
-    \x04\0\x02\x03\x03\x12\x03\x13-.b\x06proto3\
+    \x20\x01(\x0b2\x1a.google.protobuf.TimestampR\x0blastUpdated\x126\n\x06g\
+    ender\x18\x05\x20\x01(\x0e2\x1e.Example.ExampleMessage.GenderR\x06gender\
+    \"(\n\x06Gender\x12\x08\n\x04NONE\x10\0\x12\x08\n\x04MALE\x10\x01\x12\n\
+    \n\x06FEMALE\x10\x02B'Z\x0b/pb/example\xaa\x02\nPb.Example\xca\x02\nPb\\\
+    ExampleJ\x91\x05\n\x06\x12\x04\x05\0\x1a\x01\n_\n\x01\x0c\x12\x03\x05\0\
+    \x122U*\n\x20Example\x20entity\x20Protocol\x20Buffers\n\x20Author:\x20Zv\
+    erev\x20Valeriy\x20<zverevvaleriy@gmail.com>\n\n\x08\n\x01\x02\x12\x03\
+    \x07\0\x10\n\x08\n\x01\x08\x12\x03\t\0\"\n\t\n\x02\x08\x0b\x12\x03\t\0\"\
+    \n\x08\n\x01\x08\x12\x03\n\0'\n\t\n\x02\x08%\x12\x03\n\0'\n\x08\n\x01\
+    \x08\x12\x03\x0b\0%\n\t\n\x02\x08)\x12\x03\x0b\0%\n\t\n\x02\x03\0\x12\
+    \x03\r\0)\n\n\n\x02\x04\0\x12\x04\x0f\0\x1a\x01\n\n\n\x03\x04\0\x01\x12\
+    \x03\x0f\x08\x16\n\x0b\n\x04\x04\0\x02\0\x12\x03\x10\x04\x14\n\x0c\n\x05\
+    \x04\0\x02\0\x05\x12\x03\x10\x04\n\n\x0c\n\x05\x04\0\x02\0\x01\x12\x03\
+    \x10\x0b\x0f\n\x0c\n\x05\x04\0\x02\0\x03\x12\x03\x10\x12\x13\n\x0b\n\x04\
+    \x04\0\x02\x01\x12\x03\x11\x04\x11\n\x0c\n\x05\x04\0\x02\x01\x05\x12\x03\
+    \x11\x04\t\n\x0c\n\x05\x04\0\x02\x01\x01\x12\x03\x11\n\x0c\n\x0c\n\x05\
+    \x04\0\x02\x01\x03\x12\x03\x11\x0f\x10\n\x0b\n\x04\x04\0\x02\x02\x12\x03\
+    \x12\x04\x15\n\x0c\n\x05\x04\0\x02\x02\x05\x12\x03\x12\x04\n\n\x0c\n\x05\
+    \x04\0\x02\x02\x01\x12\x03\x12\x0b\x10\n\x0c\n\x05\x04\0\x02\x02\x03\x12\
+    \x03\x12\x13\x14\n\x0b\n\x04\x04\0\x02\x03\x12\x03\x13\x04/\n\x0c\n\x05\
+    \x04\0\x02\x03\x06\x12\x03\x13\x04\x1d\n\x0c\n\x05\x04\0\x02\x03\x01\x12\
+    \x03\x13\x1e*\n\x0c\n\x05\x04\0\x02\x03\x03\x12\x03\x13-.\n\x0c\n\x04\
+    \x04\0\x04\0\x12\x04\x14\x04\x18\x05\n\x0c\n\x05\x04\0\x04\0\x01\x12\x03\
+    \x14\t\x0f\n\r\n\x06\x04\0\x04\0\x02\0\x12\x03\x15\x08\x11\n\x0e\n\x07\
+    \x04\0\x04\0\x02\0\x01\x12\x03\x15\x08\x0c\n\x0e\n\x07\x04\0\x04\0\x02\0\
+    \x02\x12\x03\x15\x0f\x10\n\r\n\x06\x04\0\x04\0\x02\x01\x12\x03\x16\x08\
+    \x11\n\x0e\n\x07\x04\0\x04\0\x02\x01\x01\x12\x03\x16\x08\x0c\n\x0e\n\x07\
+    \x04\0\x04\0\x02\x01\x02\x12\x03\x16\x0f\x10\n\r\n\x06\x04\0\x04\0\x02\
+    \x02\x12\x03\x17\x08\x13\n\x0e\n\x07\x04\0\x04\0\x02\x02\x01\x12\x03\x17\
+    \x08\x0e\n\x0e\n\x07\x04\0\x04\0\x02\x02\x02\x12\x03\x17\x11\x12\n\x0b\n\
+    \x04\x04\0\x02\x04\x12\x03\x19\x04\x16\n\x0c\n\x05\x04\0\x02\x04\x06\x12\
+    \x03\x19\x04\n\n\x0c\n\x05\x04\0\x02\x04\x01\x12\x03\x19\x0b\x11\n\x0c\n\
+    \x05\x04\0\x02\x04\x03\x12\x03\x19\x14\x15b\x06proto3\
 ";
 
 static file_descriptor_proto_lazy: ::protobuf::rt::LazyV2<::protobuf::descriptor::FileDescriptorProto> = ::protobuf::rt::LazyV2::INIT;

@@ -25,15 +25,17 @@ namespace Pb.Example {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Chxwcm90b3MvZXhhbXBsZS9leGFtcGxlLnByb3RvEgdFeGFtcGxlGh9nb29n",
-            "bGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvImsKDkV4YW1wbGVNZXNzYWdl",
-            "EgwKBG5hbWUYASABKAkSCgoCaWQYAiABKAUSDQoFZW1haWwYAyABKAkSMAoM",
-            "bGFzdF91cGRhdGVkGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
-            "cEInWgsvcGIvZXhhbXBsZaoCClBiLkV4YW1wbGXKAgpQYlxFeGFtcGxlYgZw",
-            "cm90bzM="));
+            "bGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIsUBCg5FeGFtcGxlTWVzc2Fn",
+            "ZRIMCgRuYW1lGAEgASgJEgoKAmlkGAIgASgFEg0KBWVtYWlsGAMgASgJEjAK",
+            "DGxhc3RfdXBkYXRlZBgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
+            "bXASLgoGZ2VuZGVyGAUgASgOMh4uRXhhbXBsZS5FeGFtcGxlTWVzc2FnZS5H",
+            "ZW5kZXIiKAoGR2VuZGVyEggKBE5PTkUQABIICgRNQUxFEAESCgoGRkVNQUxF",
+            "EAJCJ1oLL3BiL2V4YW1wbGWqAgpQYi5FeGFtcGxlygIKUGJcRXhhbXBsZWIG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Pb.Example.ExampleMessage), global::Pb.Example.ExampleMessage.Parser, new[]{ "Name", "Id", "Email", "LastUpdated" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Pb.Example.ExampleMessage), global::Pb.Example.ExampleMessage.Parser, new[]{ "Name", "Id", "Email", "LastUpdated", "Gender" }, null, new[]{ typeof(global::Pb.Example.ExampleMessage.Types.Gender) }, null, null)
           }));
     }
     #endregion
@@ -78,6 +80,7 @@ namespace Pb.Example {
       id_ = other.id_;
       email_ = other.email_;
       lastUpdated_ = other.lastUpdated_ != null ? other.lastUpdated_.Clone() : null;
+      gender_ = other.gender_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -135,6 +138,18 @@ namespace Pb.Example {
       }
     }
 
+    /// <summary>Field number for the "gender" field.</summary>
+    public const int GenderFieldNumber = 5;
+    private global::Pb.Example.ExampleMessage.Types.Gender gender_ = global::Pb.Example.ExampleMessage.Types.Gender.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Pb.Example.ExampleMessage.Types.Gender Gender {
+      get { return gender_; }
+      set {
+        gender_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -154,6 +169,7 @@ namespace Pb.Example {
       if (Id != other.Id) return false;
       if (Email != other.Email) return false;
       if (!object.Equals(LastUpdated, other.LastUpdated)) return false;
+      if (Gender != other.Gender) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -165,6 +181,7 @@ namespace Pb.Example {
       if (Id != 0) hash ^= Id.GetHashCode();
       if (Email.Length != 0) hash ^= Email.GetHashCode();
       if (lastUpdated_ != null) hash ^= LastUpdated.GetHashCode();
+      if (Gender != global::Pb.Example.ExampleMessage.Types.Gender.None) hash ^= Gender.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -199,6 +216,10 @@ namespace Pb.Example {
         output.WriteRawTag(34);
         output.WriteMessage(LastUpdated);
       }
+      if (Gender != global::Pb.Example.ExampleMessage.Types.Gender.None) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) Gender);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -225,6 +246,10 @@ namespace Pb.Example {
         output.WriteRawTag(34);
         output.WriteMessage(LastUpdated);
       }
+      if (Gender != global::Pb.Example.ExampleMessage.Types.Gender.None) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) Gender);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -246,6 +271,9 @@ namespace Pb.Example {
       }
       if (lastUpdated_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(LastUpdated);
+      }
+      if (Gender != global::Pb.Example.ExampleMessage.Types.Gender.None) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Gender);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -273,6 +301,9 @@ namespace Pb.Example {
           LastUpdated = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         LastUpdated.MergeFrom(other.LastUpdated);
+      }
+      if (other.Gender != global::Pb.Example.ExampleMessage.Types.Gender.None) {
+        Gender = other.Gender;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -306,6 +337,10 @@ namespace Pb.Example {
               LastUpdated = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(LastUpdated);
+            break;
+          }
+          case 40: {
+            Gender = (global::Pb.Example.ExampleMessage.Types.Gender) input.ReadEnum();
             break;
           }
         }
@@ -342,10 +377,28 @@ namespace Pb.Example {
             input.ReadMessage(LastUpdated);
             break;
           }
+          case 40: {
+            Gender = (global::Pb.Example.ExampleMessage.Types.Gender) input.ReadEnum();
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the ExampleMessage message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      public enum Gender {
+        [pbr::OriginalName("NONE")] None = 0,
+        [pbr::OriginalName("MALE")] Male = 1,
+        [pbr::OriginalName("FEMALE")] Female = 2,
+      }
+
+    }
+    #endregion
 
   }
 

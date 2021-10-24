@@ -18,4 +18,10 @@ message ExampleMessage {
     int32 id = 2;
     string email = 3;
     google.protobuf.Timestamp last_updated = 4;
+    enum Gender {
+        NONE = 0;
+        MALE = 1;
+        FEMALE = 2;
+    }
+    Gender gender = 5;
 }
