@@ -18,4 +18,6 @@ message ExampleMessage {
     int32 id = 2;
     string email = 3;
     google.protobuf.Timestamp last_updated = 4;
+    string surname = 5;
+    google.protobuf.Timestamp date_of_birth = 6; 
 }

@@ -29,6 +29,14 @@ class ExampleMessage extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.google.protobuf.Timestamp last_updated = 4;</code>
      */
     protected $last_updated = null;
+    /**
+     * Generated from protobuf field <code>string surname = 5;</code>
+     */
+    protected $surname = '';
+    /**
+     * Generated from protobuf field <code>.google.protobuf.Timestamp date_of_birth = 6;</code>
+     */
+    protected $date_of_birth = null;
 
     /**
      * Constructor.
@@ -40,6 +48,8 @@ class ExampleMessage extends \Google\Protobuf\Internal\Message
      *     @type int $id
      *     @type string $email
      *     @type \Google\Protobuf\Timestamp $last_updated
+     *     @type string $surname
+     *     @type \Google\Protobuf\Timestamp $date_of_birth
      * }
      */
     public function __construct($data = NULL) {
@@ -141,6 +151,60 @@ class ExampleMessage extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->last_updated = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string surname = 5;</code>
+     * @return string
+     */
+    public function getSurname()
+    {
+        return $this->surname;
+    }
+
+    /**
+     * Generated from protobuf field <code>string surname = 5;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setSurname($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->surname = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.google.protobuf.Timestamp date_of_birth = 6;</code>
+     * @return \Google\Protobuf\Timestamp|null
+     */
+    public function getDateOfBirth()
+    {
+        return $this->date_of_birth;
+    }
+
+    public function hasDateOfBirth()
+    {
+        return isset($this->date_of_birth);
+    }
+
+    public function clearDateOfBirth()
+    {
+        unset($this->date_of_birth);
+    }
+
+    /**
+     * Generated from protobuf field <code>.google.protobuf.Timestamp date_of_birth = 6;</code>
+     * @param \Google\Protobuf\Timestamp $var
+     * @return $this
+     */
+    public function setDateOfBirth($var)
+    {
+        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
+        $this->date_of_birth = $var;
 
         return $this;
     }

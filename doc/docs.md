@@ -29,6 +29,8 @@
 | id | [int32](#int32) |  |  |
 | email | [string](#string) |  |  |
 | last_updated | [google.protobuf.Timestamp](#google-protobuf-Timestamp) |  |  |
+| surname | [string](#string) |  |  |
+| date_of_birth | [google.protobuf.Timestamp](#google-protobuf-Timestamp) |  |  |
 
 
 
