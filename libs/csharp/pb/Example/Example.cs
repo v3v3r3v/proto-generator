@@ -27,7 +27,7 @@ namespace Pb.Example {
             "Chxwcm90b3MvZXhhbXBsZS9leGFtcGxlLnByb3RvEgdFeGFtcGxlGh9nb29n",
             "bGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvImsKDkV4YW1wbGVNZXNzYWdl",
             "EgwKBG5hbWUYASABKAkSCgoCaWQYAiABKAUSDQoFZW1haWwYAyABKAkSMAoM",
-            "bGFzdF91cGRhdGVkGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
+            "bGFzdF91cGRhdGVkGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
             "cEInWgsvcGIvZXhhbXBsZaoCClBiLkV4YW1wbGXKAgpQYlxFeGFtcGxlYgZw",
             "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -124,7 +124,7 @@ namespace Pb.Example {
     }
 
     /// <summary>Field number for the "last_updated" field.</summary>
-    public const int LastUpdatedFieldNumber = 5;
+    public const int LastUpdatedFieldNumber = 4;
     private global::Google.Protobuf.WellKnownTypes.Timestamp lastUpdated_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -196,7 +196,7 @@ namespace Pb.Example {
         output.WriteString(Email);
       }
       if (lastUpdated_ != null) {
-        output.WriteRawTag(42);
+        output.WriteRawTag(34);
         output.WriteMessage(LastUpdated);
       }
       if (_unknownFields != null) {
@@ -222,7 +222,7 @@ namespace Pb.Example {
         output.WriteString(Email);
       }
       if (lastUpdated_ != null) {
-        output.WriteRawTag(42);
+        output.WriteRawTag(34);
         output.WriteMessage(LastUpdated);
       }
       if (_unknownFields != null) {
@@ -301,7 +301,7 @@ namespace Pb.Example {
             Email = input.ReadString();
             break;
           }
-          case 42: {
+          case 34: {
             if (lastUpdated_ == null) {
               LastUpdated = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
@@ -335,7 +335,7 @@ namespace Pb.Example {
             Email = input.ReadString();
             break;
           }
-          case 42: {
+          case 34: {
             if (lastUpdated_ == null) {
               LastUpdated = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }

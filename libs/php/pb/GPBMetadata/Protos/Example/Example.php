@@ -24,7 +24,7 @@ class Example
 
 id (
 email (	0
-last_updated (2.google.protobuf.TimestampB\'Z/pb/exampleª
+last_updated (2.google.protobuf.TimestampB\'Z/pb/exampleª
 Pb.ExampleÊ
 Pb\\Examplebproto3'
         , true);

@@ -26,7 +26,7 @@ class ExampleMessage extends \Google\Protobuf\Internal\Message
      */
     protected $email = '';
     /**
-     * Generated from protobuf field <code>.google.protobuf.Timestamp last_updated = 5;</code>
+     * Generated from protobuf field <code>.google.protobuf.Timestamp last_updated = 4;</code>
      */
     protected $last_updated = null;
 
@@ -114,7 +114,7 @@ class ExampleMessage extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.google.protobuf.Timestamp last_updated = 5;</code>
+     * Generated from protobuf field <code>.google.protobuf.Timestamp last_updated = 4;</code>
      * @return \Google\Protobuf\Timestamp|null
      */
     public function getLastUpdated()
@@ -133,7 +133,7 @@ class ExampleMessage extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.google.protobuf.Timestamp last_updated = 5;</code>
+     * Generated from protobuf field <code>.google.protobuf.Timestamp last_updated = 4;</code>
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */

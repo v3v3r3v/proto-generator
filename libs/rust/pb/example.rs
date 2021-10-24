@@ -113,7 +113,7 @@ impl ExampleMessage {
         ::std::mem::replace(&mut self.email, ::std::string::String::new())
     }
 
-    // .google.protobuf.Timestamp last_updated = 5;
+    // .google.protobuf.Timestamp last_updated = 4;
 
 
     pub fn get_last_updated(&self) -> &::protobuf::well_known_types::Timestamp {
@@ -174,7 +174,7 @@ impl ::protobuf::Message for ExampleMessage {
                 3 => {
                     ::protobuf::rt::read_singular_proto3_string_into(wire_type, is, &mut self.email)?;
                 },
-                5 => {
+                4 => {
                     ::protobuf::rt::read_singular_message_into(wire_type, is, &mut self.last_updated)?;
                 },
                 _ => {
@@ -218,7 +218,7 @@ impl ::protobuf::Message for ExampleMessage {
             os.write_string(3, &self.email)?;
         }
         if let Some(ref v) = self.last_updated.as_ref() {
-            os.write_tag(5, ::protobuf::wire_format::WireTypeLengthDelimited)?;
+            os.write_tag(4, ::protobuf::wire_format::WireTypeLengthDelimited)?;
             os.write_raw_varint32(v.get_cached_size())?;
             v.write_to_with_cached_sizes(os)?;
         }
@@ -320,16 +320,16 @@ static file_descriptor_proto_data: &'static [u8] = b"\
     \n\x1cprotos/example/example.proto\x12\x07Example\x1a\x1fgoogle/protobuf\
     /timestamp.proto\"\x89\x01\n\x0eExampleMessage\x12\x12\n\x04name\x18\x01\
     \x20\x01(\tR\x04name\x12\x0e\n\x02id\x18\x02\x20\x01(\x05R\x02id\x12\x14\
-    \n\x05email\x18\x03\x20\x01(\tR\x05email\x12=\n\x0clast_updated\x18\x05\
+    \n\x05email\x18\x03\x20\x01(\tR\x05email\x12=\n\x0clast_updated\x18\x04\
     \x20\x01(\x0b2\x1a.google.protobuf.TimestampR\x0blastUpdatedB'Z\x0b/pb/e\
     xample\xaa\x02\nPb.Example\xca\x02\nPb\\ExampleJ\xb1\x03\n\x06\x12\x04\
-    \x05\0\x15\x01\n_\n\x01\x0c\x12\x03\x05\0\x122U*\n\x20Example\x20entity\
+    \x05\0\x14\x01\n_\n\x01\x0c\x12\x03\x05\0\x122U*\n\x20Example\x20entity\
     \x20Protocol\x20Buffers\n\x20Author:\x20Zverev\x20Valeriy\x20<zverevvale\
     riy@gmail.com>\n\n\x08\n\x01\x02\x12\x03\x07\0\x10\n\x08\n\x01\x08\x12\
     \x03\t\0\"\n\t\n\x02\x08\x0b\x12\x03\t\0\"\n\x08\n\x01\x08\x12\x03\n\0'\
     \n\t\n\x02\x08%\x12\x03\n\0'\n\x08\n\x01\x08\x12\x03\x0b\0%\n\t\n\x02\
     \x08)\x12\x03\x0b\0%\n\t\n\x02\x03\0\x12\x03\r\0)\n\n\n\x02\x04\0\x12\
-    \x04\x0f\0\x15\x01\n\n\n\x03\x04\0\x01\x12\x03\x0f\x08\x16\n\x0b\n\x04\
+    \x04\x0f\0\x14\x01\n\n\n\x03\x04\0\x01\x12\x03\x0f\x08\x16\n\x0b\n\x04\
     \x04\0\x02\0\x12\x03\x10\x04\x14\n\x0c\n\x05\x04\0\x02\0\x05\x12\x03\x10\
     \x04\n\n\x0c\n\x05\x04\0\x02\0\x01\x12\x03\x10\x0b\x0f\n\x0c\n\x05\x04\0\
     \x02\0\x03\x12\x03\x10\x12\x13\n\x0b\n\x04\x04\0\x02\x01\x12\x03\x11\x04\
@@ -338,9 +338,9 @@ static file_descriptor_proto_data: &'static [u8] = b"\
     \x0f\x10\n\x0b\n\x04\x04\0\x02\x02\x12\x03\x12\x04\x15\n\x0c\n\x05\x04\0\
     \x02\x02\x05\x12\x03\x12\x04\n\n\x0c\n\x05\x04\0\x02\x02\x01\x12\x03\x12\
     \x0b\x10\n\x0c\n\x05\x04\0\x02\x02\x03\x12\x03\x12\x13\x14\n\x0b\n\x04\
-    \x04\0\x02\x03\x12\x03\x14\x04/\n\x0c\n\x05\x04\0\x02\x03\x06\x12\x03\
-    \x14\x04\x1d\n\x0c\n\x05\x04\0\x02\x03\x01\x12\x03\x14\x1e*\n\x0c\n\x05\
-    \x04\0\x02\x03\x03\x12\x03\x14-.b\x06proto3\
+    \x04\0\x02\x03\x12\x03\x13\x04/\n\x0c\n\x05\x04\0\x02\x03\x06\x12\x03\
+    \x13\x04\x1d\n\x0c\n\x05\x04\0\x02\x03\x01\x12\x03\x13\x1e*\n\x0c\n\x05\
+    \x04\0\x02\x03\x03\x12\x03\x13-.b\x06proto3\
 ";
 
 static file_descriptor_proto_lazy: ::protobuf::rt::LazyV2<::protobuf::descriptor::FileDescriptorProto> = ::protobuf::rt::LazyV2::INIT;
