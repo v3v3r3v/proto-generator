@@ -37,6 +37,10 @@ class ExampleMessage extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.google.protobuf.Timestamp date_of_birth = 6;</code>
      */
     protected $date_of_birth = null;
+    /**
+     * Generated from protobuf field <code>.Example.ExampleMessage.Gender gender = 7;</code>
+     */
+    protected $gender = 0;
 
     /**
      * Constructor.
@@ -50,6 +54,7 @@ class ExampleMessage extends \Google\Protobuf\Internal\Message
      *     @type \Google\Protobuf\Timestamp $last_updated
      *     @type string $surname
      *     @type \Google\Protobuf\Timestamp $date_of_birth
+     *     @type int $gender
      * }
      */
     public function __construct($data = NULL) {
@@ -205,6 +210,28 @@ class ExampleMessage extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->date_of_birth = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.Example.ExampleMessage.Gender gender = 7;</code>
+     * @return int
+     */
+    public function getGender()
+    {
+        return $this->gender;
+    }
+
+    /**
+     * Generated from protobuf field <code>.Example.ExampleMessage.Gender gender = 7;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setGender($var)
+    {
+        GPBUtil::checkEnum($var, \Pb\Example\ExampleMessage\Gender::class);
+        $this->gender = $var;
 
         return $this;
     }

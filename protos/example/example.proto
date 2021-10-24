@@ -20,4 +20,10 @@ message ExampleMessage {
     google.protobuf.Timestamp last_updated = 4;
     string surname = 5;
     google.protobuf.Timestamp date_of_birth = 6; 
+    enum Gender {
+        NONE = 0;
+        MALE = 1;
+        FEMALE = 2;
+    }
+    Gender gender = 7;
 }
