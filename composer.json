@@ -4,7 +4,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Pb\\": "pb/"
+            "Pb\\": "libs/php/pb/"
         }
     },
     "authors": [
