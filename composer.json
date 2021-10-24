@@ -4,8 +4,8 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "GPBMetadata\\": "libs/php/pb/Pb",
-            "Pb\\": "libs/php/pb/Pb"
+            "GPBMetadata\\": "libs/php/pb/GPBMetadata/",
+            "Pb\\": "libs/php/pb/Pb/"
         }
     },
     "authors": [
