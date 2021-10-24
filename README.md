@@ -76,6 +76,9 @@ make protoc-gen-doc-install
 
 ## Usage
 
+* Change protos/*.proto files
+* Build sources for libraries
+
 Make commands:
 
 - Clean **lib/*/proto** folders
