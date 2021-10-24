@@ -30,6 +30,8 @@ pub struct ExampleMessage {
     pub id: i32,
     pub email: ::std::string::String,
     pub last_updated: ::protobuf::SingularPtrField<::protobuf::well_known_types::Timestamp>,
+    pub surname: ::std::string::String,
+    pub date_of_birth: ::protobuf::SingularPtrField<::protobuf::well_known_types::Timestamp>,
     // special fields
     pub unknown_fields: ::protobuf::UnknownFields,
     pub cached_size: ::protobuf::CachedSize,
@@ -145,11 +147,75 @@ impl ExampleMessage {
     pub fn take_last_updated(&mut self) -> ::protobuf::well_known_types::Timestamp {
         self.last_updated.take().unwrap_or_else(|| ::protobuf::well_known_types::Timestamp::new())
     }
+
+    // string surname = 5;
+
+
+    pub fn get_surname(&self) -> &str {
+        &self.surname
+    }
+    pub fn clear_surname(&mut self) {
+        self.surname.clear();
+    }
+
+    // Param is passed by value, moved
+    pub fn set_surname(&mut self, v: ::std::string::String) {
+        self.surname = v;
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_surname(&mut self) -> &mut ::std::string::String {
+        &mut self.surname
+    }
+
+    // Take field
+    pub fn take_surname(&mut self) -> ::std::string::String {
+        ::std::mem::replace(&mut self.surname, ::std::string::String::new())
+    }
+
+    // .google.protobuf.Timestamp date_of_birth = 6;
+
+
+    pub fn get_date_of_birth(&self) -> &::protobuf::well_known_types::Timestamp {
+        self.date_of_birth.as_ref().unwrap_or_else(|| <::protobuf::well_known_types::Timestamp as ::protobuf::Message>::default_instance())
+    }
+    pub fn clear_date_of_birth(&mut self) {
+        self.date_of_birth.clear();
+    }
+
+    pub fn has_date_of_birth(&self) -> bool {
+        self.date_of_birth.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_date_of_birth(&mut self, v: ::protobuf::well_known_types::Timestamp) {
+        self.date_of_birth = ::protobuf::SingularPtrField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_date_of_birth(&mut self) -> &mut ::protobuf::well_known_types::Timestamp {
+        if self.date_of_birth.is_none() {
+            self.date_of_birth.set_default();
+        }
+        self.date_of_birth.as_mut().unwrap()
+    }
+
+    // Take field
+    pub fn take_date_of_birth(&mut self) -> ::protobuf::well_known_types::Timestamp {
+        self.date_of_birth.take().unwrap_or_else(|| ::protobuf::well_known_types::Timestamp::new())
+    }
 }
 
 impl ::protobuf::Message for ExampleMessage {
     fn is_initialized(&self) -> bool {
         for v in &self.last_updated {
+            if !v.is_initialized() {
+                return false;
+            }
+        };
+        for v in &self.date_of_birth {
             if !v.is_initialized() {
                 return false;
             }
@@ -177,6 +243,12 @@ impl ::protobuf::Message for ExampleMessage {
                 4 => {
                     ::protobuf::rt::read_singular_message_into(wire_type, is, &mut self.last_updated)?;
                 },
+                5 => {
+                    ::protobuf::rt::read_singular_proto3_string_into(wire_type, is, &mut self.surname)?;
+                },
+                6 => {
+                    ::protobuf::rt::read_singular_message_into(wire_type, is, &mut self.date_of_birth)?;
+                },
                 _ => {
                     ::protobuf::rt::read_unknown_or_skip_group(field_number, wire_type, is, self.mut_unknown_fields())?;
                 },
@@ -202,6 +274,13 @@ impl ::protobuf::Message for ExampleMessage {
             let len = v.compute_size();
             my_size += 1 + ::protobuf::rt::compute_raw_varint32_size(len) + len;
         }
+        if !self.surname.is_empty() {
+            my_size += ::protobuf::rt::string_size(5, &self.surname);
+        }
+        if let Some(ref v) = self.date_of_birth.as_ref() {
+            let len = v.compute_size();
+            my_size += 1 + ::protobuf::rt::compute_raw_varint32_size(len) + len;
+        }
         my_size += ::protobuf::rt::unknown_fields_size(self.get_unknown_fields());
         self.cached_size.set(my_size);
         my_size
@@ -219,6 +298,14 @@ impl ::protobuf::Message for ExampleMessage {
         }
         if let Some(ref v) = self.last_updated.as_ref() {
             os.write_tag(4, ::protobuf::wire_format::WireTypeLengthDelimited)?;
+            os.write_raw_varint32(v.get_cached_size())?;
+            v.write_to_with_cached_sizes(os)?;
+        }
+        if !self.surname.is_empty() {
+            os.write_string(5, &self.surname)?;
+        }
+        if let Some(ref v) = self.date_of_birth.as_ref() {
+            os.write_tag(6, ::protobuf::wire_format::WireTypeLengthDelimited)?;
             os.write_raw_varint32(v.get_cached_size())?;
             v.write_to_with_cached_sizes(os)?;
         }
@@ -280,6 +367,16 @@ impl ::protobuf::Message for ExampleMessage {
                 |m: &ExampleMessage| { &m.last_updated },
                 |m: &mut ExampleMessage| { &mut m.last_updated },
             ));
+            fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeString>(
+                "surname",
+                |m: &ExampleMessage| { &m.surname },
+                |m: &mut ExampleMessage| { &mut m.surname },
+            ));
+            fields.push(::protobuf::reflect::accessor::make_singular_ptr_field_accessor::<_, ::protobuf::types::ProtobufTypeMessage<::protobuf::well_known_types::Timestamp>>(
+                "date_of_birth",
+                |m: &ExampleMessage| { &m.date_of_birth },
+                |m: &mut ExampleMessage| { &mut m.date_of_birth },
+            ));
             ::protobuf::reflect::MessageDescriptor::new_pb_name::<ExampleMessage>(
                 "ExampleMessage",
                 fields,
@@ -300,6 +397,8 @@ impl ::protobuf::Clear for ExampleMessage {
         self.id = 0;
         self.email.clear();
         self.last_updated.clear();
+        self.surname.clear();
+        self.date_of_birth.clear();
         self.unknown_fields.clear();
     }
 }
@@ -318,18 +417,20 @@ impl ::protobuf::reflect::ProtobufValue for ExampleMessage {
 
 static file_descriptor_proto_data: &'static [u8] = b"\
     \n\x1cprotos/example/example.proto\x12\x07Example\x1a\x1fgoogle/protobuf\
-    /timestamp.proto\"\x89\x01\n\x0eExampleMessage\x12\x12\n\x04name\x18\x01\
+    /timestamp.proto\"\xe3\x01\n\x0eExampleMessage\x12\x12\n\x04name\x18\x01\
     \x20\x01(\tR\x04name\x12\x0e\n\x02id\x18\x02\x20\x01(\x05R\x02id\x12\x14\
     \n\x05email\x18\x03\x20\x01(\tR\x05email\x12=\n\x0clast_updated\x18\x04\
-    \x20\x01(\x0b2\x1a.google.protobuf.TimestampR\x0blastUpdatedB'Z\x0b/pb/e\
-    xample\xaa\x02\nPb.Example\xca\x02\nPb\\ExampleJ\xb1\x03\n\x06\x12\x04\
-    \x05\0\x14\x01\n_\n\x01\x0c\x12\x03\x05\0\x122U*\n\x20Example\x20entity\
+    \x20\x01(\x0b2\x1a.google.protobuf.TimestampR\x0blastUpdated\x12\x18\n\
+    \x07surname\x18\x05\x20\x01(\tR\x07surname\x12>\n\rdate_of_birth\x18\x06\
+    \x20\x01(\x0b2\x1a.google.protobuf.TimestampR\x0bdateOfBirthB'Z\x0b/pb/e\
+    xample\xaa\x02\nPb.Example\xca\x02\nPb\\ExampleJ\x9f\x04\n\x06\x12\x04\
+    \x05\0\x16\x01\n_\n\x01\x0c\x12\x03\x05\0\x122U*\n\x20Example\x20entity\
     \x20Protocol\x20Buffers\n\x20Author:\x20Zverev\x20Valeriy\x20<zverevvale\
     riy@gmail.com>\n\n\x08\n\x01\x02\x12\x03\x07\0\x10\n\x08\n\x01\x08\x12\
     \x03\t\0\"\n\t\n\x02\x08\x0b\x12\x03\t\0\"\n\x08\n\x01\x08\x12\x03\n\0'\
     \n\t\n\x02\x08%\x12\x03\n\0'\n\x08\n\x01\x08\x12\x03\x0b\0%\n\t\n\x02\
     \x08)\x12\x03\x0b\0%\n\t\n\x02\x03\0\x12\x03\r\0)\n\n\n\x02\x04\0\x12\
-    \x04\x0f\0\x14\x01\n\n\n\x03\x04\0\x01\x12\x03\x0f\x08\x16\n\x0b\n\x04\
+    \x04\x0f\0\x16\x01\n\n\n\x03\x04\0\x01\x12\x03\x0f\x08\x16\n\x0b\n\x04\
     \x04\0\x02\0\x12\x03\x10\x04\x14\n\x0c\n\x05\x04\0\x02\0\x05\x12\x03\x10\
     \x04\n\n\x0c\n\x05\x04\0\x02\0\x01\x12\x03\x10\x0b\x0f\n\x0c\n\x05\x04\0\
     \x02\0\x03\x12\x03\x10\x12\x13\n\x0b\n\x04\x04\0\x02\x01\x12\x03\x11\x04\
@@ -340,7 +441,12 @@ static file_descriptor_proto_data: &'static [u8] = b"\
     \x0b\x10\n\x0c\n\x05\x04\0\x02\x02\x03\x12\x03\x12\x13\x14\n\x0b\n\x04\
     \x04\0\x02\x03\x12\x03\x13\x04/\n\x0c\n\x05\x04\0\x02\x03\x06\x12\x03\
     \x13\x04\x1d\n\x0c\n\x05\x04\0\x02\x03\x01\x12\x03\x13\x1e*\n\x0c\n\x05\
-    \x04\0\x02\x03\x03\x12\x03\x13-.b\x06proto3\
+    \x04\0\x02\x03\x03\x12\x03\x13-.\n\x0b\n\x04\x04\0\x02\x04\x12\x03\x14\
+    \x04\x17\n\x0c\n\x05\x04\0\x02\x04\x05\x12\x03\x14\x04\n\n\x0c\n\x05\x04\
+    \0\x02\x04\x01\x12\x03\x14\x0b\x12\n\x0c\n\x05\x04\0\x02\x04\x03\x12\x03\
+    \x14\x15\x16\n\x0b\n\x04\x04\0\x02\x05\x12\x03\x15\x040\n\x0c\n\x05\x04\
+    \0\x02\x05\x06\x12\x03\x15\x04\x1d\n\x0c\n\x05\x04\0\x02\x05\x01\x12\x03\
+    \x15\x1e+\n\x0c\n\x05\x04\0\x02\x05\x03\x12\x03\x15./b\x06proto3\
 ";
 
 static file_descriptor_proto_lazy: ::protobuf::rt::LazyV2<::protobuf::descriptor::FileDescriptorProto> = ::protobuf::rt::LazyV2::INIT;
