@@ -97,3 +97,69 @@ make build-common
 ```bash
 make build-all
 ```
+
+### Problems and solutions
+
+* What if same .proto definition has been changed in two and more dev branches simeliounesly simultaneously
+
+For example:
+
+Branch main
+```
+message ExampleMessage {
+    string name = 1;
+    int32 id = 2;
+    string email = 3;
+    google.protobuf.Timestamp last_updated = 4;
+}
+```
+
+Branch foo
+```
+message ExampleMessage {
+    string name = 1;
+    int32 id = 2;
+    string email = 3;
+    google.protobuf.Timestamp last_updated = 4;
++    string surname = 5;
++    google.protobuf.Timestamp date_of_birth = 6; 
+}
+```
+
+Branch bar
+```
+message ExampleMessage {
+    string name = 1;
+    int32 id = 2;
+    string email = 3;
+    google.protobuf.Timestamp last_updated = 4;
++    enum Gender {
++        NONE = 0;
++        MALE = 1;
++        FEMALE = 2;
++    }
++    Gender gender = 5;
+}
+```
+
+And then merge leads to conflict:
+```
+```
+
+Solution:
+1. Resolve conflicts in .proto files and don't forget align [Field Numbers](https://developers.google.com/protocol-buffers/docs/proto3#assigning_field_numbers)
+
+> Don't change position of field which is already in release!
+
+2. Rebuild libraries
+
+```
+make build-all
+```
+
+> If multiple fields has same number make build-* fails.
+```
+protos/example/example.proto:28:21: Field number 5 has already been used in "Example.ExampleMessage" by field "surname".
+```
+
+3. Add changes to git index and commit
