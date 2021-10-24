@@ -26,7 +26,7 @@ class Example
 email (	0
 last_updated (2.google.protobuf.TimestampBZ/pbª
 Pb.ExampleÊ
-Pb/Examplebproto3'
+Pb\\Examplebproto3'
         , true);
 
         static::$is_initialized = true;

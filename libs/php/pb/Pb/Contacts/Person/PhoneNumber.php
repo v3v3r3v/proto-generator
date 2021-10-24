@@ -75,7 +75,7 @@ class PhoneNumber extends \Google\Protobuf\Internal\Message
      */
     public function setType($var)
     {
-        GPBUtil::checkEnum($var, \Pb/Contacts\Person\PhoneType::class);
+        GPBUtil::checkEnum($var, \Pb\Contacts\Person\PhoneType::class);
         $this->type = $var;
 
         return $this;
@@ -84,5 +84,5 @@ class PhoneNumber extends \Google\Protobuf\Internal\Message
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(PhoneNumber::class, \Pb/Contacts\Person_PhoneNumber::class);
+class_alias(PhoneNumber::class, \Pb\Contacts\Person_PhoneNumber::class);
 

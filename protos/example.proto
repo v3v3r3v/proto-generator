@@ -8,7 +8,7 @@ syntax = "proto3";
 
 option go_package = "/pb";
 option csharp_namespace = "Pb.Example"; // Define namespace for C# Foo.Bar
-option php_namespace = "Pb/Example"; // Define namespace for Php Foo/Bar
+option php_namespace = "Pb\\Example"; // Define namespace for Php Foo\\Bar
 
 
 import "google/protobuf/timestamp.proto";

@@ -20,7 +20,7 @@ class AddressBook
 “
 "protos/contacts/address_book.protoContacts"/
 AddressBook 
-people (2.Contacts.PersonB*Z/pb/contactsªPb.ContactsÊPb/Contactsbproto3'
+people (2.Contacts.PersonB*Z/pb/contactsªPb.ContactsÊPb\\Contactsbproto3'
         , true);
 
         static::$is_initialized = true;

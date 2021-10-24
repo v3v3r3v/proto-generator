@@ -9,7 +9,7 @@ package Contacts;
 
 option go_package = "pb/contacts";
 option csharp_namespace = "Pb.Contacts";
-option php_namespace = "Pb/Contacts";
+option php_namespace = "Pb\\Contacts";
 
 import "google/protobuf/timestamp.proto";
 

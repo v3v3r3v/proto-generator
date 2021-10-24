@@ -28,7 +28,7 @@ namespace Pb.Example {
             "dGFtcC5wcm90byJkCgdFeGFtcGxlEgwKBG5hbWUYASABKAkSCgoCaWQYAiAB",
             "KAUSDQoFZW1haWwYAyABKAkSMAoMbGFzdF91cGRhdGVkGAUgASgLMhouZ29v",
             "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcEIfWgMvcGKqAgpQYi5FeGFtcGxlygIK",
-            "UGIvRXhhbXBsZWIGcHJvdG8z"));
+            "UGJcRXhhbXBsZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

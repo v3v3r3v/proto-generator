@@ -46,7 +46,7 @@ class Person extends \Google\Protobuf\Internal\Message
      *     @type int $id
      *           Unique ID number for this person.
      *     @type string $email
-     *     @type \Pb/Contacts\Person\PhoneNumber[]|\Google\Protobuf\Internal\RepeatedField $phones
+     *     @type \Pb\Contacts\Person\PhoneNumber[]|\Google\Protobuf\Internal\RepeatedField $phones
      *     @type \Google\Protobuf\Timestamp $last_updated
      * }
      */
@@ -136,12 +136,12 @@ class Person extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated .Contacts.Person.PhoneNumber phones = 4;</code>
-     * @param \Pb/Contacts\Person\PhoneNumber[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Pb\Contacts\Person\PhoneNumber[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setPhones($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Pb/Contacts\Person\PhoneNumber::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Pb\Contacts\Person\PhoneNumber::class);
         $this->phones = $arr;
 
         return $this;

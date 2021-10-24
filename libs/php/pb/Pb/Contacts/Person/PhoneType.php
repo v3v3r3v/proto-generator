@@ -52,5 +52,5 @@ class PhoneType
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(PhoneType::class, \Pb/Contacts\Person_PhoneType::class);
+class_alias(PhoneType::class, \Pb\Contacts\Person_PhoneType::class);
 

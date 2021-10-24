@@ -32,7 +32,7 @@ namespace Pb.Contacts {
             "UGhvbmVOdW1iZXISDgoGbnVtYmVyGAEgASgJEigKBHR5cGUYAiABKA4yGi5D",
             "b250YWN0cy5QZXJzb24uUGhvbmVUeXBlIisKCVBob25lVHlwZRIKCgZNT0JJ",
             "TEUQABIICgRIT01FEAESCAoEV09SSxACQilaC3BiL2NvbnRhY3RzqgILUGIu",
-            "Q29udGFjdHPKAgtQYi9Db250YWN0c2IGcHJvdG8z"));
+            "Q29udGFjdHPKAgtQYlxDb250YWN0c2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

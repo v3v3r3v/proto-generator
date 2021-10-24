@@ -24,7 +24,7 @@ class AddressBook extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type \Pb/Contacts\Person[]|\Google\Protobuf\Internal\RepeatedField $people
+     *     @type \Pb\Contacts\Person[]|\Google\Protobuf\Internal\RepeatedField $people
      * }
      */
     public function __construct($data = NULL) {
@@ -43,12 +43,12 @@ class AddressBook extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated .Contacts.Person people = 1;</code>
-     * @param \Pb/Contacts\Person[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Pb\Contacts\Person[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setPeople($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Pb/Contacts\Person::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Pb\Contacts\Person::class);
         $this->people = $arr;
 
         return $this;
