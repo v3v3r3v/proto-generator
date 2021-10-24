@@ -6,6 +6,8 @@
 - [protos/example/example.proto](#protos_example_example-proto)
     - [ExampleMessage](#Example-ExampleMessage)
   
+    - [ExampleMessage.Gender](#Example-ExampleMessage-Gender)
+  
 - [Scalar Value Types](#scalar-value-types)
 
 
@@ -31,12 +33,26 @@
 | last_updated | [google.protobuf.Timestamp](#google-protobuf-Timestamp) |  |  |
 | surname | [string](#string) |  |  |
 | date_of_birth | [google.protobuf.Timestamp](#google-protobuf-Timestamp) |  |  |
+| gender | [ExampleMessage.Gender](#Example-ExampleMessage-Gender) |  |  |
 
 
 
 
 
  
+
+
+<a name="Example-ExampleMessage-Gender"></a>
+
+### ExampleMessage.Gender
+
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| NONE | 0 |  |
+| MALE | 1 |  |
+| FEMALE | 2 |  |
+
 
  
 

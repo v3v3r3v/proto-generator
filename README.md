@@ -144,6 +144,23 @@ message ExampleMessage {
 
 And then merge leads to conflict:
 ```
+message ExampleMessage {
+    string name = 1;
+    int32 id = 2;
+    string email = 3;
+    google.protobuf.Timestamp last_updated = 4;
+<<<<<< HEAD
+    string surname = 5;
+    google.protobuf.Timestamp date_of_birth = 6; 
+======
+    enum Gender {
+        NONE = 0;
+        MALE = 1;
+        FEMALE = 2;
+    }
+    Gender gender = 5;
+>>>>>> bar
+}
 ```
 
 Solution:
