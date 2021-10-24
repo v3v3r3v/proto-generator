@@ -1,0 +1,17 @@
+{
+    "name": "zverevvaleriy/proto-generator",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Pb\\": "pb/"
+        }
+    },
+    "authors": [
+        {
+            "name": "VZverev",
+            "email": "zverevvaleriy@gmail.com"
+        }
+    ],
+    "require": {}
+}
