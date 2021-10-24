@@ -175,49 +175,11 @@
         
           
           <li>
-            <a href="#protos%2fcontacts%2fperson.proto">protos/contacts/person.proto</a>
+            <a href="#protos%2fexample%2fexample.proto">protos/example/example.proto</a>
             <ul>
               
                 <li>
-                  <a href="#Contacts.Person"><span class="badge">M</span>Person</a>
-                </li>
-              
-                <li>
-                  <a href="#Contacts.Person.PhoneNumber"><span class="badge">M</span>Person.PhoneNumber</a>
-                </li>
-              
-              
-                <li>
-                  <a href="#Contacts.Person.PhoneType"><span class="badge">E</span>Person.PhoneType</a>
-                </li>
-              
-              
-              
-            </ul>
-          </li>
-        
-          
-          <li>
-            <a href="#protos%2fcontacts%2faddress_book.proto">protos/contacts/address_book.proto</a>
-            <ul>
-              
-                <li>
-                  <a href="#Contacts.AddressBook"><span class="badge">M</span>AddressBook</a>
-                </li>
-              
-              
-              
-              
-            </ul>
-          </li>
-        
-          
-          <li>
-            <a href="#protos%2fexample.proto">protos/example.proto</a>
-            <ul>
-              
-                <li>
-                  <a href="#.Example"><span class="badge">M</span>Example</a>
+                  <a href="#Example.ExampleMessage"><span class="badge">M</span>ExampleMessage</a>
                 </li>
               
               
@@ -233,12 +195,12 @@
     
       
       <div class="file-heading">
-        <h2 id="protos/contacts/person.proto">protos/contacts/person.proto</h2><a href="#title">Top</a>
+        <h2 id="protos/example/example.proto">protos/example/example.proto</h2><a href="#title">Top</a>
       </div>
       <p></p>
 
       
-        <h3 id="Contacts.Person">Person</h3>
+        <h3 id="Example.ExampleMessage">ExampleMessage</h3>
         <p></p>
 
         
@@ -259,171 +221,7 @@
                   <td>id</td>
                   <td><a href="#int32">int32</a></td>
                   <td></td>
-                  <td><p>Unique ID number for this person. </p></td>
-                </tr>
-              
-                <tr>
-                  <td>email</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
                   <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>phones</td>
-                  <td><a href="#Contacts.Person.PhoneNumber">Person.PhoneNumber</a></td>
-                  <td>repeated</td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>last_updated</td>
-                  <td><a href="#google.protobuf.Timestamp">google.protobuf.Timestamp</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-            </tbody>
-          </table>
-
-          
-
-        
-      
-        <h3 id="Contacts.Person.PhoneNumber">Person.PhoneNumber</h3>
-        <p></p>
-
-        
-          <table class="field-table">
-            <thead>
-              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
-            </thead>
-            <tbody>
-              
-                <tr>
-                  <td>number</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>type</td>
-                  <td><a href="#Contacts.Person.PhoneType">Person.PhoneType</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-            </tbody>
-          </table>
-
-          
-
-        
-      
-
-      
-        <h3 id="Contacts.Person.PhoneType">Person.PhoneType</h3>
-        <p></p>
-        <table class="enum-table">
-          <thead>
-            <tr><td>Name</td><td>Number</td><td>Description</td></tr>
-          </thead>
-          <tbody>
-            
-              <tr>
-                <td>MOBILE</td>
-                <td>0</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>HOME</td>
-                <td>1</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>WORK</td>
-                <td>2</td>
-                <td><p></p></td>
-              </tr>
-            
-          </tbody>
-        </table>
-      
-
-      
-
-      
-    
-      
-      <div class="file-heading">
-        <h2 id="protos/contacts/address_book.proto">protos/contacts/address_book.proto</h2><a href="#title">Top</a>
-      </div>
-      <p></p>
-
-      
-        <h3 id="Contacts.AddressBook">AddressBook</h3>
-        <p></p>
-
-        
-          <table class="field-table">
-            <thead>
-              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
-            </thead>
-            <tbody>
-              
-                <tr>
-                  <td>people</td>
-                  <td><a href="#Contacts.Person">Person</a></td>
-                  <td>repeated</td>
-                  <td><p> </p></td>
-                </tr>
-              
-            </tbody>
-          </table>
-
-          
-
-        
-      
-
-      
-
-      
-
-      
-    
-      
-      <div class="file-heading">
-        <h2 id="protos/example.proto">protos/example.proto</h2><a href="#title">Top</a>
-      </div>
-      <p></p>
-
-      
-        <h3 id=".Example">Example</h3>
-        <p></p>
-
-        
-          <table class="field-table">
-            <thead>
-              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
-            </thead>
-            <tbody>
-              
-                <tr>
-                  <td>name</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>id</td>
-                  <td><a href="#int32">int32</a></td>
-                  <td></td>
-                  <td><p>Unique ID number for this person. </p></td>
                 </tr>
               
                 <tr>

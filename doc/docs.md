@@ -3,134 +3,30 @@
 
 ## Table of Contents
 
-- [protos/contacts/person.proto](#protos_contacts_person-proto)
-    - [Person](#Contacts-Person)
-    - [Person.PhoneNumber](#Contacts-Person-PhoneNumber)
-  
-    - [Person.PhoneType](#Contacts-Person-PhoneType)
-  
-- [protos/contacts/address_book.proto](#protos_contacts_address_book-proto)
-    - [AddressBook](#Contacts-AddressBook)
-  
-- [protos/example.proto](#protos_example-proto)
-    - [Example](#-Example)
+- [protos/example/example.proto](#protos_example_example-proto)
+    - [ExampleMessage](#Example-ExampleMessage)
   
 - [Scalar Value Types](#scalar-value-types)
 
 
 
-<a name="protos_contacts_person-proto"></a>
+<a name="protos_example_example-proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## protos/contacts/person.proto
+## protos/example/example.proto
 
 
 
-<a name="Contacts-Person"></a>
+<a name="Example-ExampleMessage"></a>
 
-### Person
+### ExampleMessage
 
 
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | name | [string](#string) |  |  |
-| id | [int32](#int32) |  | Unique ID number for this person. |
-| email | [string](#string) |  |  |
-| phones | [Person.PhoneNumber](#Contacts-Person-PhoneNumber) | repeated |  |
-| last_updated | [google.protobuf.Timestamp](#google-protobuf-Timestamp) |  |  |
-
-
-
-
-
-
-<a name="Contacts-Person-PhoneNumber"></a>
-
-### Person.PhoneNumber
-
-
-
-| Field | Type | Label | Description |
-| ----- | ---- | ----- | ----------- |
-| number | [string](#string) |  |  |
-| type | [Person.PhoneType](#Contacts-Person-PhoneType) |  |  |
-
-
-
-
-
- 
-
-
-<a name="Contacts-Person-PhoneType"></a>
-
-### Person.PhoneType
-
-
-| Name | Number | Description |
-| ---- | ------ | ----------- |
-| MOBILE | 0 |  |
-| HOME | 1 |  |
-| WORK | 2 |  |
-
-
- 
-
- 
-
- 
-
-
-
-<a name="protos_contacts_address_book-proto"></a>
-<p align="right"><a href="#top">Top</a></p>
-
-## protos/contacts/address_book.proto
-
-
-
-<a name="Contacts-AddressBook"></a>
-
-### AddressBook
-
-
-
-| Field | Type | Label | Description |
-| ----- | ---- | ----- | ----------- |
-| people | [Person](#Contacts-Person) | repeated |  |
-
-
-
-
-
- 
-
- 
-
- 
-
- 
-
-
-
-<a name="protos_example-proto"></a>
-<p align="right"><a href="#top">Top</a></p>
-
-## protos/example.proto
-
-
-
-<a name="-Example"></a>
-
-### Example
-
-
-
-| Field | Type | Label | Description |
-| ----- | ---- | ----- | ----------- |
-| name | [string](#string) |  |  |
-| id | [int32](#int32) |  | Unique ID number for this person. |
+| id | [int32](#int32) |  |  |
 | email | [string](#string) |  |  |
 | last_updated | [google.protobuf.Timestamp](#google-protobuf-Timestamp) |  |  |
 

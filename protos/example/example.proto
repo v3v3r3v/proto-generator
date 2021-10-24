@@ -1,0 +1,22 @@
+/**
+* Example entity Protocol Buffers
+* Author: Zverev Valeriy <zverevvaleriy@gmail.com>
+*/
+
+syntax = "proto3";
+
+package Example;
+
+option go_package = "/pb/example";
+option csharp_namespace = "Pb.Example";
+option php_namespace = "Pb\\Example";
+
+import "google/protobuf/timestamp.proto";
+
+message ExampleMessage {
+    string name = 1;
+    int32 id = 2;
+    string email = 3;
+  
+    google.protobuf.Timestamp last_updated = 5;
+}

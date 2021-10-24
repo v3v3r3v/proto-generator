@@ -17,14 +17,14 @@
 #![allow(trivial_casts)]
 #![allow(unused_imports)]
 #![allow(unused_results)]
-//! Generated file from `protos/example.proto`
+//! Generated file from `protos/example/example.proto`
 
 /// Generated files are compatible only with the same version
 /// of protobuf runtime.
 // const _PROTOBUF_VERSION_CHECK: () = ::protobuf::VERSION_2_25_1;
 
 #[derive(PartialEq,Clone,Default)]
-pub struct Example {
+pub struct ExampleMessage {
     // message fields
     pub name: ::std::string::String,
     pub id: i32,
@@ -35,14 +35,14 @@ pub struct Example {
     pub cached_size: ::protobuf::CachedSize,
 }
 
-impl<'a> ::std::default::Default for &'a Example {
-    fn default() -> &'a Example {
-        <Example as ::protobuf::Message>::default_instance()
+impl<'a> ::std::default::Default for &'a ExampleMessage {
+    fn default() -> &'a ExampleMessage {
+        <ExampleMessage as ::protobuf::Message>::default_instance()
     }
 }
 
-impl Example {
-    pub fn new() -> Example {
+impl ExampleMessage {
+    pub fn new() -> ExampleMessage {
         ::std::default::Default::default()
     }
 
@@ -147,7 +147,7 @@ impl Example {
     }
 }
 
-impl ::protobuf::Message for Example {
+impl ::protobuf::Message for ExampleMessage {
     fn is_initialized(&self) -> bool {
         for v in &self.last_updated {
             if !v.is_initialized() {
@@ -252,8 +252,8 @@ impl ::protobuf::Message for Example {
         Self::descriptor_static()
     }
 
-    fn new() -> Example {
-        Example::new()
+    fn new() -> ExampleMessage {
+        ExampleMessage::new()
     }
 
     fn descriptor_static() -> &'static ::protobuf::reflect::MessageDescriptor {
@@ -262,39 +262,39 @@ impl ::protobuf::Message for Example {
             let mut fields = ::std::vec::Vec::new();
             fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeString>(
                 "name",
-                |m: &Example| { &m.name },
-                |m: &mut Example| { &mut m.name },
+                |m: &ExampleMessage| { &m.name },
+                |m: &mut ExampleMessage| { &mut m.name },
             ));
             fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeInt32>(
                 "id",
-                |m: &Example| { &m.id },
-                |m: &mut Example| { &mut m.id },
+                |m: &ExampleMessage| { &m.id },
+                |m: &mut ExampleMessage| { &mut m.id },
             ));
             fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeString>(
                 "email",
-                |m: &Example| { &m.email },
-                |m: &mut Example| { &mut m.email },
+                |m: &ExampleMessage| { &m.email },
+                |m: &mut ExampleMessage| { &mut m.email },
             ));
             fields.push(::protobuf::reflect::accessor::make_singular_ptr_field_accessor::<_, ::protobuf::types::ProtobufTypeMessage<::protobuf::well_known_types::Timestamp>>(
                 "last_updated",
-                |m: &Example| { &m.last_updated },
-                |m: &mut Example| { &mut m.last_updated },
+                |m: &ExampleMessage| { &m.last_updated },
+                |m: &mut ExampleMessage| { &mut m.last_updated },
             ));
-            ::protobuf::reflect::MessageDescriptor::new_pb_name::<Example>(
-                "Example",
+            ::protobuf::reflect::MessageDescriptor::new_pb_name::<ExampleMessage>(
+                "ExampleMessage",
                 fields,
                 file_descriptor_proto()
             )
         })
     }
 
-    fn default_instance() -> &'static Example {
-        static instance: ::protobuf::rt::LazyV2<Example> = ::protobuf::rt::LazyV2::INIT;
-        instance.get(Example::new)
+    fn default_instance() -> &'static ExampleMessage {
+        static instance: ::protobuf::rt::LazyV2<ExampleMessage> = ::protobuf::rt::LazyV2::INIT;
+        instance.get(ExampleMessage::new)
     }
 }
 
-impl ::protobuf::Clear for Example {
+impl ::protobuf::Clear for ExampleMessage {
     fn clear(&mut self) {
         self.name.clear();
         self.id = 0;
@@ -304,44 +304,43 @@ impl ::protobuf::Clear for Example {
     }
 }
 
-impl ::std::fmt::Debug for Example {
+impl ::std::fmt::Debug for ExampleMessage {
     fn fmt(&self, f: &mut ::std::fmt::Formatter<'_>) -> ::std::fmt::Result {
         ::protobuf::text_format::fmt(self, f)
     }
 }
 
-impl ::protobuf::reflect::ProtobufValue for Example {
+impl ::protobuf::reflect::ProtobufValue for ExampleMessage {
     fn as_ref(&self) -> ::protobuf::reflect::ReflectValueRef {
         ::protobuf::reflect::ReflectValueRef::Message(self)
     }
 }
 
 static file_descriptor_proto_data: &'static [u8] = b"\
-    \n\x14protos/example.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"\x82\
-    \x01\n\x07Example\x12\x12\n\x04name\x18\x01\x20\x01(\tR\x04name\x12\x0e\
-    \n\x02id\x18\x02\x20\x01(\x05R\x02id\x12\x14\n\x05email\x18\x03\x20\x01(\
-    \tR\x05email\x12=\n\x0clast_updated\x18\x05\x20\x01(\x0b2\x1a.google.pro\
-    tobuf.TimestampR\x0blastUpdatedB\x1fZ\x03/pb\xaa\x02\nPb.Example\xca\x02\
-    \nPb\\ExampleJ\x94\x04\n\x06\x12\x04\x05\0\x15\x03\n_\n\x01\x0c\x12\x03\
-    \x05\0\x122U*\n\x20Example\x20entity\x20Protocol\x20Buffers\n\x20Author:\
-    \x20Zverev\x20Valeriy\x20<zverevvaleriy@gmail.com>\n\n\x08\n\x01\x08\x12\
-    \x03\x08\0\x1a\n\t\n\x02\x08\x0b\x12\x03\x08\0\x1a\n\x08\n\x01\x08\x12\
-    \x03\t\0'\n,\n\x02\x08%\x12\x03\t\0'\"!\x20Define\x20namespace\x20for\
-    \x20C#\x20Foo.Bar\n\n\x08\n\x01\x08\x12\x03\n\0%\n.\n\x02\x08)\x12\x03\n\
-    \0%\"#\x20Define\x20namespace\x20for\x20Php\x20Foo\\\\Bar\n\n\t\n\x02\
-    \x03\0\x12\x03\r\0)\n\n\n\x02\x04\0\x12\x04\x0f\0\x15\x03\n\n\n\x03\x04\
-    \0\x01\x12\x03\x0f\x08\x0f\n\x0b\n\x04\x04\0\x02\0\x12\x03\x10\x04\x14\n\
-    \x0c\n\x05\x04\0\x02\0\x05\x12\x03\x10\x04\n\n\x0c\n\x05\x04\0\x02\0\x01\
-    \x12\x03\x10\x0b\x0f\n\x0c\n\x05\x04\0\x02\0\x03\x12\x03\x10\x12\x13\n0\
-    \n\x04\x04\0\x02\x01\x12\x03\x11\x04\x11\"#\x20Unique\x20ID\x20number\
-    \x20for\x20this\x20person.\n\n\x0c\n\x05\x04\0\x02\x01\x05\x12\x03\x11\
-    \x04\t\n\x0c\n\x05\x04\0\x02\x01\x01\x12\x03\x11\n\x0c\n\x0c\n\x05\x04\0\
-    \x02\x01\x03\x12\x03\x11\x0f\x10\n\x0b\n\x04\x04\0\x02\x02\x12\x03\x12\
-    \x04\x15\n\x0c\n\x05\x04\0\x02\x02\x05\x12\x03\x12\x04\n\n\x0c\n\x05\x04\
-    \0\x02\x02\x01\x12\x03\x12\x0b\x10\n\x0c\n\x05\x04\0\x02\x02\x03\x12\x03\
-    \x12\x13\x14\n\x0b\n\x04\x04\0\x02\x03\x12\x03\x14\x04/\n\x0c\n\x05\x04\
-    \0\x02\x03\x06\x12\x03\x14\x04\x1d\n\x0c\n\x05\x04\0\x02\x03\x01\x12\x03\
-    \x14\x1e*\n\x0c\n\x05\x04\0\x02\x03\x03\x12\x03\x14-.b\x06proto3\
+    \n\x1cprotos/example/example.proto\x12\x07Example\x1a\x1fgoogle/protobuf\
+    /timestamp.proto\"\x89\x01\n\x0eExampleMessage\x12\x12\n\x04name\x18\x01\
+    \x20\x01(\tR\x04name\x12\x0e\n\x02id\x18\x02\x20\x01(\x05R\x02id\x12\x14\
+    \n\x05email\x18\x03\x20\x01(\tR\x05email\x12=\n\x0clast_updated\x18\x05\
+    \x20\x01(\x0b2\x1a.google.protobuf.TimestampR\x0blastUpdatedB'Z\x0b/pb/e\
+    xample\xaa\x02\nPb.Example\xca\x02\nPb\\ExampleJ\xb1\x03\n\x06\x12\x04\
+    \x05\0\x15\x01\n_\n\x01\x0c\x12\x03\x05\0\x122U*\n\x20Example\x20entity\
+    \x20Protocol\x20Buffers\n\x20Author:\x20Zverev\x20Valeriy\x20<zverevvale\
+    riy@gmail.com>\n\n\x08\n\x01\x02\x12\x03\x07\0\x10\n\x08\n\x01\x08\x12\
+    \x03\t\0\"\n\t\n\x02\x08\x0b\x12\x03\t\0\"\n\x08\n\x01\x08\x12\x03\n\0'\
+    \n\t\n\x02\x08%\x12\x03\n\0'\n\x08\n\x01\x08\x12\x03\x0b\0%\n\t\n\x02\
+    \x08)\x12\x03\x0b\0%\n\t\n\x02\x03\0\x12\x03\r\0)\n\n\n\x02\x04\0\x12\
+    \x04\x0f\0\x15\x01\n\n\n\x03\x04\0\x01\x12\x03\x0f\x08\x16\n\x0b\n\x04\
+    \x04\0\x02\0\x12\x03\x10\x04\x14\n\x0c\n\x05\x04\0\x02\0\x05\x12\x03\x10\
+    \x04\n\n\x0c\n\x05\x04\0\x02\0\x01\x12\x03\x10\x0b\x0f\n\x0c\n\x05\x04\0\
+    \x02\0\x03\x12\x03\x10\x12\x13\n\x0b\n\x04\x04\0\x02\x01\x12\x03\x11\x04\
+    \x11\n\x0c\n\x05\x04\0\x02\x01\x05\x12\x03\x11\x04\t\n\x0c\n\x05\x04\0\
+    \x02\x01\x01\x12\x03\x11\n\x0c\n\x0c\n\x05\x04\0\x02\x01\x03\x12\x03\x11\
+    \x0f\x10\n\x0b\n\x04\x04\0\x02\x02\x12\x03\x12\x04\x15\n\x0c\n\x05\x04\0\
+    \x02\x02\x05\x12\x03\x12\x04\n\n\x0c\n\x05\x04\0\x02\x02\x01\x12\x03\x12\
+    \x0b\x10\n\x0c\n\x05\x04\0\x02\x02\x03\x12\x03\x12\x13\x14\n\x0b\n\x04\
+    \x04\0\x02\x03\x12\x03\x14\x04/\n\x0c\n\x05\x04\0\x02\x03\x06\x12\x03\
+    \x14\x04\x1d\n\x0c\n\x05\x04\0\x02\x03\x01\x12\x03\x14\x1e*\n\x0c\n\x05\
+    \x04\0\x02\x03\x03\x12\x03\x14-.b\x06proto3\
 ";
 
 static file_descriptor_proto_lazy: ::protobuf::rt::LazyV2<::protobuf::descriptor::FileDescriptorProto> = ::protobuf::rt::LazyV2::INIT;
