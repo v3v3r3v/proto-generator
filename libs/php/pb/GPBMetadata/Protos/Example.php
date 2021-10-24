@@ -17,14 +17,16 @@ class Example
         \GPBMetadata\Google\Protobuf\Timestamp::initOnce();
         $pool->internalAddGeneratedFile(
             '
-À
+¥
 protos/example.proto"d
 Example
 name (	
 
 id (
 email (	0
-last_updated (2.google.protobuf.TimestampB:Z3github.com/zverevvaleriy/proto-generator/libs/go/pbªPbbproto3'
+last_updated (2.google.protobuf.TimestampBZ/pbª
+Pb.ExampleÊ
+Pb/Examplebproto3'
         , true);
 
         static::$is_initialized = true;

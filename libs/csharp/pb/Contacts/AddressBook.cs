@@ -26,9 +26,8 @@ namespace Pb.Contacts {
           string.Concat(
             "CiJwcm90b3MvY29udGFjdHMvYWRkcmVzc19ib29rLnByb3RvEghDb250YWN0",
             "cxoccHJvdG9zL2NvbnRhY3RzL3BlcnNvbi5wcm90byIvCgtBZGRyZXNzQm9v",
-            "axIgCgZwZW9wbGUYASADKAsyEC5Db250YWN0cy5QZXJzb25CTFo8Z2l0aHVi",
-            "LmNvbS96dmVyZXZ2YWxlcml5L3Byb3RvLWdlbmVyYXRvci9saWJzL2dvL3Bi",
-            "L2NvbnRhY3RzqgILUGIuQ29udGFjdHNiBnByb3RvMw=="));
+            "axIgCgZwZW9wbGUYASADKAsyEC5Db250YWN0cy5QZXJzb25CKloML3BiL2Nv",
+            "bnRhY3RzqgILUGIuQ29udGFjdHPKAgtQYi9Db250YWN0c2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Pb.Contacts.PersonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

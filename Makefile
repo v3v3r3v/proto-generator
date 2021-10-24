@@ -14,7 +14,8 @@ build-php:
 
 build-go:
 	rm -rf libs/go/pb/*
-	protoc --go_out=libs/go --go_opt=module=github.com/zverevvaleriy/proto-generator/libs/go $(PROTO_FILES)
+	# protoc --go_out=libs/go --go_opt=module=github.com/zverevvaleriy/proto-generator/libs/go $(PROTO_FILES)
+	protoc --go_out=libs/go $(PROTO_FILES)
 
 build-rust:
 	rm -rf libs/rust/pb/*

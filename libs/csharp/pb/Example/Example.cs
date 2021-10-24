@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Pb {
+namespace Pb.Example {
 
   /// <summary>Holder for reflection information generated from protos/example.proto</summary>
   public static partial class ExampleReflection {
@@ -27,12 +27,12 @@ namespace Pb {
             "ChRwcm90b3MvZXhhbXBsZS5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVz",
             "dGFtcC5wcm90byJkCgdFeGFtcGxlEgwKBG5hbWUYASABKAkSCgoCaWQYAiAB",
             "KAUSDQoFZW1haWwYAyABKAkSMAoMbGFzdF91cGRhdGVkGAUgASgLMhouZ29v",
-            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcEI6WjNnaXRodWIuY29tL3p2ZXJldnZh",
-            "bGVyaXkvcHJvdG8tZ2VuZXJhdG9yL2xpYnMvZ28vcGKqAgJQYmIGcHJvdG8z"));
+            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcEIfWgMvcGKqAgpQYi5FeGFtcGxlygIK",
+            "UGIvRXhhbXBsZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Pb.Example), global::Pb.Example.Parser, new[]{ "Name", "Id", "Email", "LastUpdated" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Pb.Example.Example), global::Pb.Example.Example.Parser, new[]{ "Name", "Id", "Email", "LastUpdated" }, null, null, null, null)
           }));
     }
     #endregion
@@ -53,7 +53,7 @@ namespace Pb {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Pb.ExampleReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Pb.Example.ExampleReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

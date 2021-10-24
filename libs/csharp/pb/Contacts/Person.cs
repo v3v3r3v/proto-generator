@@ -31,9 +31,8 @@ namespace Pb.Contacts {
             "dXBkYXRlZBgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAaRwoL",
             "UGhvbmVOdW1iZXISDgoGbnVtYmVyGAEgASgJEigKBHR5cGUYAiABKA4yGi5D",
             "b250YWN0cy5QZXJzb24uUGhvbmVUeXBlIisKCVBob25lVHlwZRIKCgZNT0JJ",
-            "TEUQABIICgRIT01FEAESCAoEV09SSxACQkxaPGdpdGh1Yi5jb20venZlcmV2",
-            "dmFsZXJpeS9wcm90by1nZW5lcmF0b3IvbGlicy9nby9wYi9jb250YWN0c6oC",
-            "C1BiLkNvbnRhY3RzYgZwcm90bzM="));
+            "TEUQABIICgRIT01FEAESCAoEV09SSxACQilaC3BiL2NvbnRhY3RzqgILUGIu",
+            "Q29udGFjdHPKAgtQYi9Db250YWN0c2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
